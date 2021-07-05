@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>the Zenith</title>
+</head>
+<body>
+    <p>welcome to the Zenith's paint app
+        <a href="" download="my_paint.png">SAVE Paint</a>
+        <i class="fa fa-refresh refresh-btn"><strong><i class="fa fa-trash"></i></strong></i>
+    </p>
+
+    <div class="paint-equip">
+        <div class="colorCircle active" data-color="blue" onclick="chooseColor(this)"></div>
+        <div class="colorCircle" data-color="green" onclick="chooseColor(this)"></div>
+        <div class="colorCircle" data-color="black" onclick="chooseColor(this)"></div>
+        <div class="colorCircle" data-color="gray" onclick="chooseColor(this)"></div>
+        <div class="colorCircle" data-color="indigo" onclick="chooseColor(this)"></div>
+        <div class="colorCircle" data-color="voilet"  onclick="chooseColor(this)"></div>
+    </div>
+    <div class="color">
+        <label for="favcolor"> Choose a color of yours</label>
+        <input type="color" name="favcolor" value="#ff0000" onchange="Favcolor(this)">
+    </div>
+    <div class="pensize" id="penSize">
+        <label for="pensize"><i class="fa fa-pensil"></i>penSize</label>
+        <input type="range" name="pensize" id="penSize" value="10" step="5" min="5" max="50" onchange="penSizeChange(this.value)">
+    </div>
+    <div class="blackboard">
+        <canvas width="800px" height="600px"></canvas>
+    </div>
+
+    <script src="paint.js"></script>
+</body>
+</html>
